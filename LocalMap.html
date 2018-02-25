@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			L200150024 - Dicky Pratama
+		</title>
+	</body>
+	<body align='center'>
+
+		<h2>Mata Kuliah Sistem Informasi Geografis</h2>
+		<h5>Gedung Fakultas Komunikasi dan Informatika</h5>
+		<h5>Universitas Muhammadiyah Surakarta</h5>
+		<center>
+			<div id="map" style="width:75%;height:400px;"></div>
+		</center>
+		<script>
+
+		  function initMap() {
+			var myLatLng = {lat: -7.5567249, lng: 110.771014};
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+			  zoom: 19,
+			  center: myLatLng
+			});
+
+			var marker = new google.maps.Marker({
+			  position: myLatLng,
+			  map: map,
+			  title: 'Gedung FKI UMS'
+			});
+		  }
+		</script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5wcvAsEwC7lkb4YzFPgUk5Dx5EGGYv20&callback=initMap">
+		</script>
+	</body>
+</html>
